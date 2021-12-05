@@ -279,7 +279,7 @@ function DevDayPage() {
     writeTerminal('\r\npress devday --help to show menu\n\r');
   }
 
-  // 이런식으로 소감 넣어도 좋을것 같아용
+  
   async function writeMincho(){
 
       await asyncTyped('', 500);
@@ -288,20 +288,25 @@ function DevDayPage() {
       await asyncTyped('하');
       await asyncTyped('세');
       await asyncTyped('요', 150);
-      await asyncTyped('.', 150);
-      await asyncTyped('.', 150);
       await asyncTyped('\r\n', 150);
-      await asyncTyped('이 글을 보고 있다면 ... ', 150);
+      await asyncTyped('민쵸 ', 150);
+      await asyncTyped('입니다 !!!', 150);
+      await asyncTyped(' (⸝⸝･ᴗ･⸝⸝)੭˒˒', 150);
 
       await asyncTyped('\r\n', 150);
-      await asyncTyped('우린 회의를 ... ', 550);
+      await asyncTyped('2021 년도 ', 250);
+      await asyncTyped('한 해의 ', 250);
+      await asyncTyped('마무리를 ', 250);
       await asyncTyped('\r\n', 150);
-      await asyncTyped('하고 있겠죠.. ??', 550);
+      await asyncTyped('크몽 데브데이와 ', 550);
+      await asyncTyped('함께 ', 250);
+      await asyncTyped('할 수 있어서 ', 250);
+      await asyncTyped('씬나요 ~~ !! ', 250);
+      await asyncTyped('(۶•̀ᴗ•́)۶ ', 250);
       await asyncTyped('\r\n', 150);
-      await asyncTyped('그럼 전 이만', 550);
       await asyncTyped('\r\n', 150);
-      await asyncTyped('뿅 !! (〜￣▽￣)〜', 550);
-      await asyncTyped('\r\n', 150);
+      await asyncTyped('크몽 데브 데이 화이팅 !!! ', 550);
+      writeTerminal('\r\n');
       writeTerminal('\r\n');
       writeTerminal('press devday --help to show menu\n\r');
 
@@ -311,7 +316,6 @@ function DevDayPage() {
  async function writeVigli() {
 
       await asyncTyped('', 500);
-      await asyncTyped('\r\n', 150);
       await asyncTyped('DanieL', 50);
       await asyncTyped(' bk', 200);
       await asyncTyped(' Mincho', 200);
@@ -341,7 +345,6 @@ function DevDayPage() {
 
  async function writeDanieL() {
       await asyncTyped('', 500);
-      await asyncTyped('\r\n', 150);
       await asyncTyped('T: ', 50);
       await asyncTyped('Thanks ', 150);
       await asyncTyped('god, ', 150);
