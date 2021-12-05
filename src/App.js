@@ -52,7 +52,7 @@ function DevDayPage() {
       await asyncTyped('브', 150);
       await asyncTyped('데', 150);
       asyncTyped('이\r\n');
-      asyncTyped('press any key to start');
+      asyncTyped('press Enter key to start');
     }
   }, [asyncTyped, writeTerminal])
 
@@ -79,6 +79,15 @@ function DevDayPage() {
       }
       case 'ls': {
         writeLs();
+        break;
+      }
+      case 'ls -al': {
+        writeLsAll();
+        break;
+      }
+      case 'vi .dev-kmong': {
+        clearTerminal();
+        wirteDevKmong();
         break;
       }
       case 'cd':
@@ -185,6 +194,46 @@ function DevDayPage() {
       writeTerminal('\r\n');
     }
 
+    // 이스터 에그로 추가 하면 좋을 듯 
+    function writeLsAll() {
+      
+      writeTerminal('\r\n');
+      writeTerminal('total 1216\n\r');
+      writeTerminal('drwxr-xr-x    11 User  staff      125 12  6 12:16 .\n\r');
+      writeTerminal('drwxr-xr-x     4 User  staff     1216 12  6 12:16 ..\n\r');
+      writeTerminal(`drwxr-xr-x    13 User  staff      416 12  6 12:16 ${colors.blue}.git${colors.white}\n\r`);
+      writeTerminal('-rw-r--r--     1 User  staff      310 12  6 12:16 .gitignore\n\r');
+      writeTerminal(`drwxr-xr-x    19 User  staff      919 12  6 12:16 ${colors.blue}bk${colors.white}\n\r`);
+      writeTerminal(`drwxr-xr-x    12 User  staff      408 12  6 12:16 ${colors.blue}edgar${colors.white}\n\r`);
+      writeTerminal(`drwxr-xr-x     9 User  staff      315 12  6 12:16 ${colors.blue}daniel${colors.white}\n\r`);
+      writeTerminal(`drwxr-xr-x     9 User  staff      630 12  6 12:16 ${colors.blue}pablo${colors.white}\n\r`);
+      writeTerminal(`drwxr-xr-x     5 User  staff      401 12  6 12:16 ${colors.blue}mincho${colors.white}\n\r`);
+      writeTerminal(`drwxr-xr-x    19 User  staff      919 12  6 12:16 ${colors.blue}vigli${colors.white}\n\r`);
+      writeTerminal(`drwxr-xr-x    15 User  staff      609 12  6 12:16 ${colors.blue}nadia${colors.white}\n\r`);
+      writeTerminal(`drwxr-xr-x    13 User  staff      418 12  6 12:16 ${colors.blue}bong${colors.white}\n\r`);
+      writeTerminal(`-rw-rw-r--    10 User  staff     1216 12  6 12:16 .dev-kmong\n\r`);
+      writeTerminal('\r\n');
+
+    }
+
+    async function wirteDevKmong () {
+      await asyncTyped('', 500);
+      await asyncTyped('이 ');
+      await asyncTyped('파일을 ');
+      await asyncTyped('찾아내다니 ');
+      await asyncTyped('.');
+      await asyncTyped('.');
+      await asyncTyped('.', 150);
+      await asyncTyped('\r\n', 150);
+      await asyncTyped('당신은 ', 150);
+      await asyncTyped('찐 개발자 ', 150);
+      await asyncTyped('✧⁺⸜(  •⌄•  )⸝⁺✧', 150);
+      
+      await asyncTyped('\r\n', 150);
+      writeTerminal('\r\n');
+      writeTerminal('press devday --help to show menu\n\r');
+    }
+
     function writeCd() {
       const person = input.split(' ')[1] ?? '';
       writeTerminal('\r\n');
@@ -273,12 +322,14 @@ function DevDayPage() {
     writeTerminal('\r\t\t16:10 - 16:40    ooo [주제 주제 주제]\n');
     writeTerminal('\r\t\t16:50 - 17:20    ooo [주제 주제 주제]\n');
     writeTerminal('\r\t\t17:30 - 18:00    ooo [주제 주제 주제]\n');
+    writeTerminal('\r\t\t18:10 - 18:40    ooo [주제 주제 주제]\n');
 
     writeTerminal('\r\n');
     writeTerminal('\r\n');
     writeTerminal('\r\npress devday --help to show menu\n\r');
   }
 
+// 소감 작성 함수 시작
   
   async function writeMincho(){
 
