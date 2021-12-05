@@ -232,6 +232,7 @@ function DevDayPage() {
       await asyncTyped('\r\n', 150);
       writeTerminal('\r\n');
       writeTerminal('press devday --help to show menu\n\r');
+      writeTerminal('\r\n');
     }
 
     function writeCd() {
@@ -325,8 +326,8 @@ function DevDayPage() {
     writeTerminal('\r\t\t18:10 - 18:40    ooo [주제 주제 주제]\n');
 
     writeTerminal('\r\n');
-    writeTerminal('\r\n');
     writeTerminal('\r\npress devday --help to show menu\n\r');
+    writeTerminal('\r\n');
   }
 
 // 소감 작성 함수 시작
@@ -360,6 +361,7 @@ function DevDayPage() {
       writeTerminal('\r\n');
       writeTerminal('\r\n');
       writeTerminal('press devday --help to show menu\n\r');
+      writeTerminal('\r\n');
 
   }
 
@@ -392,6 +394,7 @@ function DevDayPage() {
       writeTerminal('\r\n');
       writeTerminal('press devday --help to show menu\n\r');
 
+      writeTerminal('\r\n');
  }
 
  async function writeDanieL() {
@@ -415,6 +418,7 @@ function DevDayPage() {
       await asyncTyped('\r\n', 150);
       writeTerminal('\r\n');
       writeTerminal('press devday --help to show menu\n\r');
+      writeTerminal('\r\n');
  }
 
   const handleChangeCLI = useCallback((data) => {
