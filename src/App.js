@@ -97,7 +97,17 @@ function DevDayPage() {
         window.location.replace("/2021-devday/")
         break;
       }
-      case 'cd bk':
+      case 'cd bk': {
+        const person = input.split(' ')[1] ?? '';
+        if (person === '' || person === '..') {
+          writeNoSuchCd();
+        } else {
+          clearTerminal();
+          writeBk();
+        }
+
+        break;
+      }
       case 'cd edgar':
       case 'cd daniel': {
 
@@ -414,6 +424,24 @@ function DevDayPage() {
       await asyncTyped(`참여하세요~ `, 550);
       await asyncTyped(`(˵ ͡~ ͜ʖ ͡°˵)ﾉ`, 150);
 
+
+      await asyncTyped('\r\n', 150);
+      writeTerminal('\r\n');
+      writeTerminal('press devday --help to show menu\n\r');
+      writeTerminal('\r\n');
+ }
+
+  async function writeBk() {
+      await asyncTyped('', 500);
+      await asyncTyped('감사합니다 ', 50);
+      await asyncTyped('\r\n ', 150);
+      await asyncTyped('별로 ', 150);
+      await asyncTyped('한 ', 150);
+      await asyncTyped('건 ', 350);
+      await asyncTyped('없지만 ', 350);
+      await asyncTyped('함께 할 수 있어 ', 150);
+      await asyncTyped('영광 ', 150);
+      await asyncTyped('이었습니다.  ', 150);
 
       await asyncTyped('\r\n', 150);
       writeTerminal('\r\n');
