@@ -90,9 +90,17 @@ function DevDayPage() {
         wirteDevKmong();
         break;
       }
+      case 'cat .dev-kmong': {
+        clearTerminal();
+        wirteDevKmong();
+        break;
+      }
       case 'cd':
       case 'cd ':
-      case 'cd ..':
+      case 'cd ..': {
+        writeLs();
+        break;
+      }
       case 'cd ~' : {
         window.location.replace("/2021-devday/")
         break;
@@ -134,7 +142,36 @@ function DevDayPage() {
         }
         break;
       }
-      case 'cd nadia':
+      case 'cd nadia':{
+        const person = input.split(' ')[1] ?? '';
+        if (person === '' || person === '..') {
+          writeNoSuchCd();
+        } else {
+          clearTerminal();
+          writeNadia();
+        }
+        break;
+      }
+      case 'cd pablo': {
+        const person = input.split(' ')[1] ?? '';
+        if (person === '' || person === '..') {
+          writeNoSuchCd();
+        } else {
+          clearTerminal();
+          writePablo();
+        }
+        break;
+      }
+      case 'cd bong': {
+        const person = input.split(' ')[1] ?? '';
+        if (person === '' || person === '..') {
+          writeNoSuchCd();
+        } else {
+          clearTerminal();
+          writeBong();
+        }
+        break;
+      }
       case 'show me the money': {
         writeTerminal('\r\n');
         writeTerminal('10,000');
@@ -188,9 +225,9 @@ function DevDayPage() {
 
     function writeLs() {
       writeTerminal('\r\n');
-      writeTerminal(`${colors.blue}bk               edgar               daniel               pablo`);
+      writeTerminal(`${colors.blue}bk               daniel               pablo                bong`);
       writeTerminal('\r\n');
-      writeTerminal(`mincho           vigli               nadia                bong${colors.white}`);
+      writeTerminal(`mincho           vigli                nadia${colors.white}`);
       writeTerminal('\r\n');
     }
 
@@ -204,7 +241,6 @@ function DevDayPage() {
       writeTerminal(`drwxr-xr-x    13 User  staff      416 12  6 12:16 ${colors.blue}.git${colors.white}\n\r`);
       writeTerminal('-rw-r--r--     1 User  staff      310 12  6 12:16 .gitignore\n\r');
       writeTerminal(`drwxr-xr-x    19 User  staff      919 12  6 12:16 ${colors.blue}bk${colors.white}\n\r`);
-      writeTerminal(`drwxr-xr-x    12 User  staff      408 12  6 12:16 ${colors.blue}edgar${colors.white}\n\r`);
       writeTerminal(`drwxr-xr-x     9 User  staff      315 12  6 12:16 ${colors.blue}daniel${colors.white}\n\r`);
       writeTerminal(`drwxr-xr-x     9 User  staff      630 12  6 12:16 ${colors.blue}pablo${colors.white}\n\r`);
       writeTerminal(`drwxr-xr-x     5 User  staff      401 12  6 12:16 ${colors.blue}mincho${colors.white}\n\r`);
@@ -228,6 +264,26 @@ function DevDayPage() {
       await asyncTyped('당신은 ', 150);
       await asyncTyped('찐 개발자 ', 150);
       await asyncTyped('✧⁺⸜(  •⌄•  )⸝⁺✧', 150);
+
+      await asyncTyped('\r\n', 150);
+      await asyncTyped('\r\n', 150);
+      await asyncTyped('\r\n', 150);
+
+      await asyncTyped('민초에게 ', 150);
+      await asyncTyped('\'찾았다\' ', 150);
+      await asyncTyped('라고 ', 150);
+      await asyncTyped('dm ', 150);
+      await asyncTyped('주시는 ', 150);
+      await asyncTyped('선착순 ', 150);
+      await asyncTyped('3 ', 150);
+      await asyncTyped('분 에게는', 150);
+      await asyncTyped('\r\n', 150);
+      await asyncTyped('특 ! 별 ! 한 ! ', 150);
+      await asyncTyped('선 ! 물 ! 이 ! ', 150);
+      await asyncTyped('\r\n', 150);
+      await asyncTyped('뚜둥 !!! ', 150);
+      await asyncTyped('( ๑˃̶ ꇴ ˂̶)♪⁺ ', 150);
+
       
       await asyncTyped('\r\n', 150);
       writeTerminal('\r\n');
@@ -397,6 +453,7 @@ function DevDayPage() {
       writeTerminal('\r\n');
  }
 
+ // DanieL 소감 작성
  async function writeDanieL() {
       await asyncTyped('', 500);
       await asyncTyped('T: ', 50);
@@ -420,6 +477,82 @@ function DevDayPage() {
       writeTerminal('press devday --help to show menu\n\r');
       writeTerminal('\r\n');
  }
+
+ // Pablo 소감 작성
+ async function writePablo() {
+  await asyncTyped('', 500);
+  await asyncTyped('뜻깊은 ', 50);
+  await asyncTyped('행사에 ', 150);
+  await asyncTyped('도움이 ', 150);
+  await asyncTyped(`될 `, 150);
+  await asyncTyped(`수 `, 150);
+  await asyncTyped(`있어서 `, 150);
+  await asyncTyped('영광입니다 ', 150);
+  await asyncTyped('(۶•̀ᴗ•́)۶ ', 50);
+
+
+  await asyncTyped('\r\n', 150);
+  writeTerminal('\r\n');
+  writeTerminal('press devday --help to show menu\n\r');
+  writeTerminal('\r\n');
+}
+
+// Nadia 소감 작성
+async function writeNadia() {
+  await asyncTyped('', 500);
+  await asyncTyped('크몽의 ', 50);
+  await asyncTyped('첫 ', 150);
+  await asyncTyped('데브데이 ', 150);
+  await asyncTyped(`행사에 `, 150);
+  await asyncTyped(`살포시 `, 150);
+  await asyncTyped(`발 `, 150);
+  await asyncTyped('얹을 ', 150);
+  await asyncTyped('수 ', 150);
+  await asyncTyped('있어 ', 150);
+  await asyncTyped('좋았어요! ', 150);
+  await asyncTyped('\r\n', 150);
+  await asyncTyped('디자인 ', 150);
+  await asyncTyped('귀엽게 ', 150);
+  await asyncTyped('봐주시라 ', 150);
+  await asyncTyped('٩(•̤̀ᵕ•̤́๑)૭✧ ', 50);
+
+
+  await asyncTyped('\r\n', 150);
+  writeTerminal('\r\n');
+  writeTerminal('press devday --help to show menu\n\r');
+  writeTerminal('\r\n');
+}
+
+// Bong 소감 작성
+// 제 1회 크몽 데브데이 너무 기대됩니다. 재밌는 행사 기획해주신 비글리와 준비하느라 고생하신 TF분들 넘 수고 많으셨어요!
+async function writeBong() {
+  await asyncTyped('', 500);
+  await asyncTyped('제 ', 50);
+  await asyncTyped('1회 ', 150);
+  await asyncTyped('크몽 ', 150);
+  await asyncTyped('데브데이 ', 150);
+  await asyncTyped(`너무 `, 150);
+  await asyncTyped(`기대됩니다. `, 150);
+  await asyncTyped('\r\n', 150);
+  await asyncTyped(`재밌는 `, 150);
+  await asyncTyped('행사 ', 150);
+  await asyncTyped('기획해 ', 150);
+  await asyncTyped('주신 ', 150);
+  await asyncTyped('비글리와 ', 150);
+  await asyncTyped('\r\n', 150);
+  await asyncTyped('준비하느라 ', 150);
+  await asyncTyped('고생하신 ', 150);
+  await asyncTyped('TF분들 ', 150);
+  await asyncTyped('넘 ', 150);
+  await asyncTyped('수고 ', 150);
+  await asyncTyped('많으셨어요 ! ', 50);
+
+
+  await asyncTyped('\r\n', 150);
+  writeTerminal('\r\n');
+  writeTerminal('press devday --help to show menu\n\r');
+  writeTerminal('\r\n');
+}
 
   const handleChangeCLI = useCallback((data) => {
     if (!enabled) {
