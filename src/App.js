@@ -365,36 +365,36 @@ function DevDayPage() {
     writeTerminal('\r\n');
 
     await asyncTyped('\r14:00 - 14:05\n', 350);
-    await asyncTyped('\r  - Tony  [토니의 키노트]\n', 200);
+    await asyncTyped('\r  - Tony  [토니의 키노트]\n', 330);
     await asyncTyped('\r\n');
     await asyncTyped('\r14:05 - 14:45\n' , 200);
-    await asyncTyped('\r  - Vigli : 유니코드와 UTF\n' , 200);
-    await asyncTyped('\r  - Jaden : 복잡한 스케줄 Airflow로 쉽게 관리하기\n', 200);
+    await asyncTyped('\r  - Vigli : 유니코드와 UTF\n' , 300);
+    await asyncTyped('\r  - Jaden : 복잡한 스케줄 Airflow로 쉽게 관리하기\n', 300);
     
     await asyncTyped('\r\n', 200);
-    await asyncTyped('\r14:45 - 14:55   10분 휴식\n', 200);
+    await asyncTyped('\r14:45 - 14:55   10분 휴식\n', 250);
     await asyncTyped('\r\n', 200);
 
     await asyncTyped('\r14:55 - 15:30\n', 200);
-    await asyncTyped('\r  - bk : 함께여서 고마웠고 다신 만나지 말자 - IE -\n', 200);
-    await asyncTyped('\r  - Bong : 크몽 프론트엔드 챕터가 일하는 방법\n', 200);
+    await asyncTyped('\r  - bk : 함께여서 고마웠고 다신 만나지 말자 - IE -\n', 300);
+    await asyncTyped('\r  - Bong : 크몽 프론트엔드 챕터가 일하는 방법\n', 300);
 
     await asyncTyped('\r\n', 200);
-    await asyncTyped('\r15:30 - 15:40   10분 휴식\n', 200);
+    await asyncTyped('\r15:30 - 15:40   10분 휴식\n', 250);
     await asyncTyped('\r\n', 200);
 
     await asyncTyped('\r15:40 - 16:20\n', 200);
-    await asyncTyped('\r  - Daniel : 크몽 10년, 너 왜 이렇게 변했어.\n', 200);
-    await asyncTyped('\r\t(크몽 10년간의 아키텍처 변화 되돌아보기)\n', 200);
-    await asyncTyped('\r  - Edgar : 대규모 클라이언트 앱 개발 팀의 생산성을 개선한 여러 가지 방법\n', 200);
-    await asyncTyped('\r\t- Line DevDay 요약\n', 200);
+    await asyncTyped('\r  - Daniel : 크몽 10년, 너 왜 이렇게 변했어.\n', 300);
+    await asyncTyped('\r\t(크몽 10년간의 아키텍처 변화 되돌아보기)\n', 250);
+    await asyncTyped('\r  - Edgar : 대규모 클라이언트 앱 개발 팀의 생산성을 개선한 여러 가지 방법\n', 300);
+    await asyncTyped('\r\t- Line DevDay 요약\n', 250);
 
     await asyncTyped('\r\n', 200);
-    await asyncTyped('\r16:20 - 16:30   10분 휴식\n', 200);
+    await asyncTyped('\r16:20 - 16:30   10분 휴식\n', 250);
     await asyncTyped('\r\n', 200);
 
     await asyncTyped('\r16:30 - 17:10\n', 200);
-    await asyncTyped('\r  - Aaron : HTTP Protocol 1 to 3\n', 200);
+    await asyncTyped('\r  - Aaron : HTTP Protocol 1 to 3\n', 300);
 
     writeTerminal('\r\n');
     writeTerminal('\r\npress devday --help to show menu\n\r');
