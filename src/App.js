@@ -493,7 +493,6 @@ function DevDayPage() {
       writeTerminal('\r\n');
  }
 
-<<<<<<< HEAD
  // Pablo 소감 작성
  async function writePablo() {
   await asyncTyped('', 500);
@@ -569,25 +568,6 @@ async function writeBong() {
   writeTerminal('press devday --help to show menu\n\r');
   writeTerminal('\r\n');
 }
-=======
-  async function writeBk() {
-      await asyncTyped('', 500);
-      await asyncTyped('감사합니다 ', 50);
-      await asyncTyped('\r\n ', 150);
-      await asyncTyped('별로 ', 150);
-      await asyncTyped('한 ', 150);
-      await asyncTyped('건 ', 350);
-      await asyncTyped('없지만 ', 350);
-      await asyncTyped('함께 할 수 있어 ', 150);
-      await asyncTyped('영광 ', 150);
-      await asyncTyped('이었습니다.  ', 150);
-
-      await asyncTyped('\r\n', 150);
-      writeTerminal('\r\n');
-      writeTerminal('press devday --help to show menu\n\r');
-      writeTerminal('\r\n');
- }
->>>>>>> d39dcf807dc35be56d3ba77f120a3bf7f0b169a5
 
   const handleChangeCLI = useCallback((data) => {
     if (!enabled) {
