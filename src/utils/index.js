@@ -35,7 +35,7 @@ export const HELP_LIST = [{
 }, {
     command: 'devday readme',
     description: '---- visit notion',
-    url: 'https://kmong.com'
+    url: 'https://www.notion.so/DevDay-2021-4-1850de5e2cfe444b8c266ae88733ff74'
 }];
 
 export const WITH_PROMPT = '\r\n$ ';

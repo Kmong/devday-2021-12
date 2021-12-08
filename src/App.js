@@ -2,7 +2,7 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { XTerm } from 'xterm-for-react'
 import { WebLinksAddon } from 'xterm-addon-web-links';
-import { colors, HELP_LIST, NOT_FOUND, SHOW_HELP, WELCOME_TEXTS, WITH_PROMPT } from './utils';
+import { colors, fontSize, HELP_LIST, NOT_FOUND, SHOW_HELP, WELCOME_TEXTS, WITH_PROMPT } from './utils';
 
 function DevDayPage() {
   const [enabled, setEnabled] = useState(true);
@@ -216,6 +216,7 @@ function DevDayPage() {
     writeTerminal("");
     setInput('');
 
+
     function writeNotFoundCommand() {
       writeTerminal('\r\n');
       writeTerminal(NOT_FOUND(input));
@@ -238,7 +239,7 @@ function DevDayPage() {
       writeTerminal(`${colors.blue}bk               daniel               pablo                bong`);
       writeTerminal('\r\n');
       writeTerminal(`mincho           vigli                nadia${colors.white}`);
-      writeTerminal('\r\n');
+      writeTerminal('\r\n ');
     }
 
     // 이스터 에그로 추가 하면 좋을 듯 
@@ -258,7 +259,7 @@ function DevDayPage() {
       writeTerminal(`drwxr-xr-x    15 User  staff      609 12  6 12:16 ${colors.blue}nadia${colors.white}\n\r`);
       writeTerminal(`drwxr-xr-x    13 User  staff      418 12  6 12:16 ${colors.blue}bong${colors.white}\n\r`);
       writeTerminal(`-rw-rw-r--    10 User  staff     1216 12  6 12:16 .dev-kmong\n\r`);
-      writeTerminal('\r\n');
+      writeTerminal('\r\n ');
 
     }
 
@@ -299,6 +300,7 @@ function DevDayPage() {
       writeTerminal('\r\n');
       writeTerminal('press devday --help to show menu\n\r');
       writeTerminal('\r\n');
+      await asyncTyped('press Enter key to refresh\n\r', 100);
     }
 
     function writeCd() {
@@ -349,6 +351,7 @@ function DevDayPage() {
       await asyncTyped('\r\n', 150);
       writeTerminal('\r\n');
       asyncTyped('press devday --help to show menu\n\r');
+      writeTerminal('\r\n');
 
     }
   }, [asyncTyped, input, writeTerminal]);
@@ -358,7 +361,9 @@ function DevDayPage() {
     writeTerminal('\r\n');
     writeTerminal('\r\n');
 
-    await asyncTyped('\r\t*************	 Kmong DevDay	 *************\n', 100);
+    await asyncTyped(`\r\t*************	 Kmong DevDay	 *************\n`, 100);
+    await asyncTyped(`\r\t          	 2021. 12. 16 	    \n`, 100);
+
     writeTerminal('\r\n');
     await asyncTyped(`\r\t\t      일정표 D-${day} (12/16)\n`, 120);
 
@@ -385,20 +390,22 @@ function DevDayPage() {
 
     await asyncTyped('\r15:40 - 16:20\n', 200);
     await asyncTyped('\r  - Daniel : 크몽 10년, 너 왜 이렇게 변했어.\n', 300);
-    await asyncTyped('\r\t(크몽 10년간의 아키텍처 변화 되돌아보기)\n', 250);
+    await asyncTyped('\r\t(크몽 10년간의 아키텍처 변화 되돌아보기)\n', 350);
     await asyncTyped('\r  - Edgar : 대규모 클라이언트 앱 개발 팀의 생산성을 개선한 여러 가지 방법\n', 300);
-    await asyncTyped('\r\t- Line DevDay 요약\n', 250);
+    await asyncTyped('\r\t- Line DevDay 요약\n', 350);
 
     await asyncTyped('\r\n', 200);
     await asyncTyped('\r16:20 - 16:30   10분 휴식\n', 250);
-    await asyncTyped('\r\n', 200);
+    await asyncTyped('\r\n', 250);
 
-    await asyncTyped('\r16:30 - 17:10\n', 200);
-    await asyncTyped('\r  - Aaron : HTTP Protocol 1 to 3\n', 300);
+    await asyncTyped('\r16:30 - 17:10\n', 250);
+    await asyncTyped('\r  - Aaron : HTTP Protocol 1 to 3\n', 350);
 
-    writeTerminal('\r\n');
-    writeTerminal('\r\npress devday --help to show menu\n\r');
-    writeTerminal('\r\n');
+    await asyncTyped('\r\n', 250);
+    await asyncTyped('\r\npress devday --help to show menu\n\r', 150);
+    await asyncTyped('press Enter key to refresh\n\r', 100);
+
+    writeTerminal('\r\n$ ');
   }
 
 // 소감 작성 함수 시작
