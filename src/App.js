@@ -362,10 +362,10 @@ function DevDayPage() {
     writeTerminal('\r\n');
 
     await asyncTyped(`\r\t*************	 Kmong DevDay	 *************\n`, 100);
-    await asyncTyped(`\r\t          	 2021. 12. 16 	    \n`, 100);
+    await asyncTyped(`\r\t           	 2021. 12. 16 	    \n`, 100);
 
     writeTerminal('\r\n');
-    await asyncTyped(`\r\t\t      일정표 D-${day} (12/16)\n`, 120);
+    await asyncTyped(`\r\t\t           일 정 표 \n`, 120);
 
     writeTerminal('\r\n');
 
@@ -402,8 +402,8 @@ function DevDayPage() {
     await asyncTyped('\r  - Aaron : HTTP Protocol 1 to 3\n', 350);
 
     await asyncTyped('\r\n', 250);
-    await asyncTyped('\r\npress devday --help to show menu\n\r', 150);
-    await asyncTyped('press Enter key to refresh\n\r', 100);
+    await asyncTyped('\r\npress devday --help to show menu\n\r', 250);
+    await asyncTyped('press Enter key to refresh\n\r', 200);
 
     writeTerminal('\r\n$ ');
   }
