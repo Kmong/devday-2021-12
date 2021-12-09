@@ -44,10 +44,10 @@ function DevDayPage() {
       await asyncTyped('', 750);
       await renderKmongDevday(WELCOME_TEXTS.DEVDAY);
       await asyncTyped('', 500);
-      await asyncTyped('1');
-      await asyncTyped('회');
-      await asyncTyped(' 크');
-      await asyncTyped('몽');
+      await asyncTyped('21년');
+      await asyncTyped('하');
+      await asyncTyped('반');
+      await asyncTyped('기');
       await asyncTyped(' 데', 150);
       await asyncTyped('브', 150);
       await asyncTyped('데', 150);
