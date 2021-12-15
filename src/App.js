@@ -102,7 +102,7 @@ function DevDayPage() {
         break;
       }
       case 'cd ~' : {
-        window.location.replace("/2021-devday/")
+        window.location.replace("/devday-2021-12/")
         break;
       }
       case 'cd bk': {
